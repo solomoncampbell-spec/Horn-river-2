@@ -218,50 +218,73 @@ drives AECO prices from $2.50/GJ to $4.37-6.00/GJ by 2030</li>
                             <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/9d7aa6e40b254364ab35dd370dd400d2/6983fe78-42b5-4295-a33f-6908ab1a96e3/69a447be.png" alt="Horn River Financial Projections" class="financial-chart">
                         </div>
                         <div class="npv-scenarios">
-                            <h3>NPV Scenario Analysis</h3>
+                            <h3 style="color: #0066cc; font-size: 1.4em; margin-bottom: 20px;">NPV Scenario Analysis</h3>
                             <div class="scenario-table">
-                                <table>
+                                <table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 1.1em;">
                                     <thead>
-                                        <tr>
-                                            <th>Scenario</th>
-                                            <th>Probability</th>
-                                            <th>AECO 2030 (CAD/GJ)</th>
-                                            <th>Mining NPV (24m)</th>
-                                            <th>LNG Option Value</th>
-                                            <th>Combined NPV</th>
+                                        <tr style="background-color: #f0f8ff; color: #003366;">
+                                            <th style="padding: 12px; border: 1px solid #ccc; text-align: left;">Scenario</th>
+                                            <th style="padding: 12px; border: 1px solid #ccc; text-align: center;">Probability</th>
+                                            <th style="padding: 12px; border: 1px solid #ccc; text-align: center;">AECO 2030 (CAD/GJ)</th>
+                                            <th style="padding: 12px; border: 1px solid #ccc; text-align: center;">Mining NPV (24m)</th>
+                                            <th style="padding: 12px; border: 1px solid #ccc; text-align: center;">LNG Option Value</th>
+                                            <th style="padding: 12px; border: 1px solid #ccc; text-align: center; font-weight: bold;">Combined NPV</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr class="bear-case">
-                                            <td>Bear</td>
-                                            <td>25%</td>
-                                            <td>$2.50</td>
-                                            <td>$12M</td>
-                                            <td>$8M</td>
-                                            <td>$20M</td>
+                                    <tbody style="color: #333333;">
+                                        <tr class="bear-case" style="background-color: #fff5f5;">
+                                            <td style="padding: 12px; border: 1px solid #ccc; font-weight: bold; color: #cc0000;">Bear</td>
+                                            <td style="padding: 12px; border: 1px solid #ccc; text-align: center;">25%</td>
+                                            <td style="padding: 12px; border: 1px solid #ccc; text-align: center;">$2.50</td>
+                                            <td style="padding: 12px; border: 1px solid #ccc; text-align: center;">$12M</td>
+                                            <td style="padding: 12px; border: 1px solid #ccc; text-align: center;">$8M</td>
+                                            <td style="padding: 12px; border: 1px solid #ccc; text-align: center; font-weight: bold; color: #cc0000;">$20M</td>
                                         </tr>
-                                        <tr class="base-case">
-                                            <td>Base</td>
-                                            <td>50%</td>
-                                            <td>$4.37</td>
-                                            <td>$18M</td>
-                                            <td>$45M</td>
-                                            <td>$63M</td>
+                                        <tr class="base-case" style="background-color: #f0fff0;">
+                                            <td style="padding: 12px; border: 1px solid #ccc; font-weight: bold; color: #009900;">Base</td>
+                                            <td style="padding: 12px; border: 1px solid #ccc; text-align: center;">50%</td>
+                                            <td style="padding: 12px; border: 1px solid #ccc; text-align: center;">$4.37</td>
+                                            <td style="padding: 12px; border: 1px solid #ccc; text-align: center;">$18M</td>
+                                            <td style="padding: 12px; border: 1px solid #ccc; text-align: center;">$45M</td>
+                                            <td style="padding: 12px; border: 1px solid #ccc; text-align: center; font-weight: bold; color: #009900;">$63M</td>
                                         </tr>
-                                        <tr class="bull-case">
-                                            <td>Bull</td>
-                                            <td>25%</td>
-                                            <td>$6.00</td>
-                                            <td>$22M</td>
-                                            <td>$85M</td>
-                                            <td>$107M</td>
+                                        <tr class="bull-case" style="background-color: #f0f0ff;">
+                                            <td style="padding: 12px; border: 1px solid #ccc; font-weight: bold; color: #0066cc;">Bull</td>
+                                            <td style="padding: 12px; border: 1px solid #ccc; text-align: center;">25%</td>
+                                            <td style="padding: 12px; border: 1px solid #ccc; text-align: center;">$6.00</td>
+                                            <td style="padding: 12px; border: 1px solid #ccc; text-align: center;">$22M</td>
+                                            <td style="padding: 12px; border: 1px solid #ccc; text-align: center;">$85M</td>
+                                            <td style="padding: 12px; border: 1px solid #ccc; text-align: center; font-weight: bold; color: #0066cc;">$107M</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="bridge-strategy">
-                                <h3>Bridge Mining Strategy</h3>
-                                <p><strong>$750,000/month revenue</strong> at current BTC pricing with 5MW deployment funds holding and transport costs for 24-36 months, securing LNG arbitrage option value.</p>
+                            <div class="key-assumptions" style="margin-top: 30px;">
+                                <h3 style="color: #333333; font-size: 1.3em; margin-bottom: 15px;">Key Model Assumptions</h3>
+                                <div class="assumptions-grid" style="display: flex; gap: 25px;">
+                                    <div style="flex: 1; background-color: #f9f9f9; padding: 20px; border-radius: 8px; border-left: 4px solid #0066cc;">
+                                        <h4 style="color: #0066cc; margin-bottom: 10px;">Mining Component</h4>
+                                        <ul style="color: #333333; font-size: 1.05em; margin: 0; padding-left: 20px;">
+                                            <li>5MW deployment generating $750k/month</li>
+                                            <li>24-month bridge timeline</li>
+                                            <li>BTC price scenarios: $60k-$150k</li>
+                                            <li>Gas cost: CAD $0.45-2.75/GJ</li>
+                                        </ul>
+                                    </div>
+                                    <div style="flex: 1; background-color: #f9f9f9; padding: 20px; border-radius: 8px; border-left: 4px solid #009900;">
+                                        <h4 style="color: #009900; margin-bottom: 10px;">LNG Option Component</h4>
+                                        <ul style="color: #333333; font-size: 1.05em; margin: 0; padding-left: 20px;">
+                                            <li>20-40 MMcf/d production capacity</li>
+                                            <li>AECO basis improvement to 2030</li>
+                                            <li>Transport costs: $0.85/GJ (NGTL)</li>
+                                            <li>10% discount rate applied</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="scenario-interpretation" style="margin-top: 20px; background-color: #fff9e6; padding: 20px; border-radius: 8px; border-left: 4px solid #ff9900;">
+                                    <h4 style="color: #cc6600; margin-bottom: 10px;">Scenario Interpretation</h4>
+                                    <p style="color: #333333; font-size: 1.1em; margin: 0;">**Expected NPV: $57M** (probability-weighted average). Mining provides immediate cash flow while securing valuable option on future LNG arbitrage as AECO pricing recovers driven by West Coast LNG export demand.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
