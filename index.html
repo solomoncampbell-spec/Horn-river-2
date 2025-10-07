@@ -14,14 +14,13 @@
                 <h1>Horn River Energy-First Computing Platform</h1>
             </div>
             <div class="slide-counter">
-                <span id="current-slide">1</span> / <span id="total-slides">9</span>
+                <span id="current-slide">1</span> / <span id="total-slides">10</span>
             </div>
             <nav class="slide-nav">
                 <button id="prev-btn" class="nav-btn" onclick="previousSlide()">‹ Previous</button>
                 <button id="next-btn" class="nav-btn" onclick="nextSlide()">Next ›</button>
             </nav>
         </header>
-
         <!-- Main Content Area -->
         <main class="slides-container">
             <!-- Slide 1: Executive Summary -->
@@ -57,7 +56,6 @@
                     </div>
                 </div>
             </section>
-
             <!-- Slide 2: Phased Development Strategy -->
             <section class="slide" id="slide-2">
                 <div class="slide-content">
@@ -114,7 +112,6 @@
                     </div>
                 </div>
             </section>
-
             <!-- Slide 3: Asset Foundation -->
             <section class="slide" id="slide-3">
                 <div class="slide-content">
@@ -158,7 +155,6 @@
                     </div>
                 </div>
             </section>
-
             <!-- Slide 4: Market Opportunity -->
             <section class="slide" id="slide-4">
                 <div class="slide-content">
@@ -197,7 +193,7 @@
                                     <li><strong>Paramount-Ovintiv transaction</strong> validates Horn River Basin value</li>
                                     <li><strong>LNG Canada operational</strong> (1.84 Bcf/d) tightening AECO basis</li>
                                     <li><strong>4.35 Bcf/d additional capacity</strong> planned by 2030</li>
-                                    <li><strong>AECO basis improvement</strong> -$1.80 to -$1.00/MMBtu 
+                                    <li><strong>AECO basis improvement</strong> -$1.80 to -$1.00/MMBtu
 drives AECO prices from $2.50/GJ to $4.37-6.00/GJ by 2030</li>
                                 </ul>
                             </div>
@@ -205,7 +201,6 @@ drives AECO prices from $2.50/GJ to $4.37-6.00/GJ by 2030</li>
                     </div>
                 </div>
             </section>
-
             <!-- Slide 5: Financial Projections & NPV Analysis -->
             <section class="slide" id="slide-5">
                 <div class="slide-content">
@@ -290,9 +285,25 @@ drives AECO prices from $2.50/GJ to $4.37-6.00/GJ by 2030</li>
                     </div>
                 </div>
             </section>
-
-         <!-- Slide 6: LNG Market Arbitrage & Netback Economics -->
-            <section class="slide" id="slide-6">
+            <!-- Slide 6: Bitcoin Mining Revenue Waterfall -->
+<section class="slide" id="slide-6">
+    <div class="slide-content">
+        <div class="slide-header">
+            <h1>Bitcoin Mining Revenue Waterfall</h1>
+            <h2 class="subtitle">Revenue Distribution & JV Priority</h2>
+        </div>
+        <div class="slide-body" style="display: flex; flex-direction: column; align-items: center;">
+            <div style="width:100%; max-width:820px; background:#10181c; border-radius:16px; padding:28px;">
+                <img src="bitcoin_revenue_waterfall_backbone.jpg" alt="Bitcoin Mining Revenue Waterfall" style="width:100%;max-width:700px;display:block;margin:auto;border-radius:12px;box-shadow:0 4px 30px #00336622;">
+            </div>
+            <p style="color:#ccc;text-align:center;max-width:600px; margin-top:18px;">
+                Waterfall describes payment priorities for mining revenue through JV expenses, debt service, cost recovery, and profit sharing.
+            </p>
+        </div>
+    </div>
+</section>
+         <!-- Slide 7: LNG Market Arbitrage & Netback Economics -->
+            <section class="slide" id="slide-7">
                 <div class="slide-content">
                     <div class="slide-header">
                         <h1>LNG Market Arbitrage & Netback Economics</h1>
@@ -354,8 +365,8 @@ drives AECO prices from $2.50/GJ to $4.37-6.00/GJ by 2030</li>
                     </div>
                 </div>
             </section>
-            <!-- Slide 7: Competitive Advantages -->
-            <section class="slide" id="slide-7">
+            <!-- Slide 8: Competitive Advantages -->
+            <section class="slide" id="slide-8">
                 <div class="slide-content">
                     <div class="slide-header">
                         <h1>Competitive Advantages</h1>
@@ -391,9 +402,8 @@ drives AECO prices from $2.50/GJ to $4.37-6.00/GJ by 2030</li>
                     </div>
                 </div>
             </section>
-
-            <!-- Slide 8: Investment Structure -->
-            <section class="slide" id="slide-8">
+            <!-- Slide 9: Investment Structure -->
+            <section class="slide" id="slide-9">
                 <div class="slide-content">
                     <div class="slide-header">
                         <h1>Investment Structure</h1>
@@ -446,9 +456,8 @@ drives AECO prices from $2.50/GJ to $4.37-6.00/GJ by 2030</li>
                     </div>
                 </div>
             </section>
-
-            <!-- Slide 9: Exit Strategies -->
-            <section class="slide" id="slide-9">
+            <!-- Slide 10: Exit Strategies -->
+            <section class="slide" id="slide-10">
                 <div class="slide-content">
                     <div class="slide-header">
                         <h1>Exit Strategies</h1>
@@ -485,7 +494,6 @@ drives AECO prices from $2.50/GJ to $4.37-6.00/GJ by 2030</li>
                 </div>
             </section>
         </main>
-
         <!-- Slide Navigation -->
         <footer class="slide-navigation">
             <div class="slide-indicators">
@@ -498,10 +506,10 @@ drives AECO prices from $2.50/GJ to $4.37-6.00/GJ by 2030</li>
                 <button class="indicator" onclick="goToSlide(7)" aria-label="Go to slide 7">7</button>
                 <button class="indicator" onclick="goToSlide(8)" aria-label="Go to slide 8">8</button>
                 <button class="indicator" onclick="goToSlide(9)" aria-label="Go to slide 9">9</button>
+                <button class="indicator" onclick="goToSlide(10)" aria-label="Go to slide 10">10</button>
             </div>
         </footer>
     </div>
-
     <script src="app.js"></script>
 </body>
 </html>
