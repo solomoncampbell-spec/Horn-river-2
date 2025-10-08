@@ -1,5 +1,5 @@
 let currentSlide = 1;
-const totalSlides = 9; // Updated to 9 slides
+const totalSlides = 10; // Updated to 10 slides
 
 function showSlide(slideNumber) {
     // Hide all slides
@@ -150,7 +150,6 @@ let autoPlayInterval;
 
 function startAutoPlay(intervalMs = 5000) {
     if (autoPlay) return;
-    
     autoPlay = true;
     autoPlayInterval = setInterval(() => {
         if (currentSlide < totalSlides) {
@@ -163,7 +162,6 @@ function startAutoPlay(intervalMs = 5000) {
 
 function stopAutoPlay() {
     if (!autoPlay) return;
-    
     autoPlay = false;
     clearInterval(autoPlayInterval);
 }
