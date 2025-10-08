@@ -1,5 +1,5 @@
 let currentSlide = 1;
-const totalSlides = 9; // Updated to 9 slides
+const totalSlides = 10; // Updated to 9 slides
 
 function showSlide(slideNumber) {
     // Hide all slides
