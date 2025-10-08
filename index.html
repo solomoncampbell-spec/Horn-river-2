@@ -17,8 +17,8 @@
                 <span id="current-slide">1</span> / <span id="total-slides">10</span>
             </div>
             <nav class="slide-nav">
-                <button id="prev-btn" class="nav-btn" onclick="previousSlide()">← Previous</button>
-                <button id="next-btn" class="nav-btn" onclick="nextSlide()">Next →</button>
+                <button id="prev-btn" class="nav-btn">← Previous</button>
+                <button id="next-btn" class="nav-btn">Next →</button>
             </nav>
         </header>
 
@@ -328,110 +328,92 @@
                     </div>
                     <div class="slide-body">
                         <div class="waterfall-container">
-                            <svg width="100%" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="100%" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
                                 <defs>
-                                    <style>
-                                        .waterfall-box { stroke-width: 2; rx: 8; ry: 8; }
-                                        .waterfall-text { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 14px; font-weight: 500; text-anchor: middle; }
-                                        .waterfall-small-text { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; font-weight: 400; text-anchor: middle; }
-                                        .waterfall-arrow { stroke: #374151; stroke-width: 2; marker-end: url(#arrowhead); }
-                                        .decision-text { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 11px; font-weight: 400; text-anchor: middle; }
-                                    </style>
                                     <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
                                         <polygon points="0 0, 10 3.5, 0 7" fill="#374151" />
                                     </marker>
                                 </defs>
                                 
-                                <!-- Top level: Bitcoin Mining Revenue -->
-                                <rect x="300" y="70" width="200" height="40" class="waterfall-box" fill="#06b6d4" stroke="#0891b2"/>
-                                <text x="400" y="95" class="waterfall-text" fill="white">Bitcoin Mining Revenue</text>
+                                <!-- Bitcoin Mining Revenue -->
+                                <rect x="300" y="30" width="200" height="35" rx="6" fill="#06b6d4" stroke="#0891b2" stroke-width="2"/>
+                                <text x="400" y="52" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="500">Bitcoin Mining Revenue</text>
                                 
-                                <!-- Arrow down -->
-                                <line x1="400" y1="110" x2="400" y2="130" class="waterfall-arrow"/>
+                                <line x1="400" y1="65" x2="400" y2="85" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
                                 
                                 <!-- JV Operating Expenses -->
-                                <rect x="300" y="140" width="200" height="35" class="waterfall-box" fill="#dc2626" stroke="#b91c1c"/>
-                                <text x="400" y="160" class="waterfall-text" fill="white">JV Operating Expenses</text>
+                                <rect x="300" y="95" width="200" height="30" rx="6" fill="#dc2626" stroke="#b91c1c" stroke-width="2"/>
+                                <text x="400" y="113" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="13">JV Operating Expenses</text>
                                 
-                                <!-- Arrow down -->
-                                <line x1="400" y1="175" x2="400" y2="195" class="waterfall-arrow"/>
+                                <line x1="400" y1="125" x2="400" y2="145" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
                                 
                                 <!-- Generator/Asset Debt Service -->
-                                <rect x="300" y="205" width="200" height="35" class="waterfall-box" fill="#dc2626" stroke="#b91c1c"/>
-                                <text x="400" y="225" class="waterfall-text" fill="white">Generator/Asset Debt Service</text>
+                                <rect x="300" y="155" width="200" height="30" rx="6" fill="#dc2626" stroke="#b91c1c" stroke-width="2"/>
+                                <text x="400" y="173" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="13">Generator/Asset Debt Service</text>
                                 
-                                <!-- Arrow down -->
-                                <line x1="400" y1="240" x2="400" y2="260" class="waterfall-arrow"/>
+                                <line x1="400" y1="185" x2="400" y2="210" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
                                 
-                                <!-- Decision diamond: Power Cost vs 2.6¢/kWh? -->
-                                <polygon points="400,270 360,290 400,310 440,290" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
-                                <text x="400" y="285" class="decision-text" fill="black">Power Cost vs</text>
-                                <text x="400" y="295" class="decision-text" fill="black">2.6¢/kWh?</text>
+                                <!-- Decision diamond -->
+                                <polygon points="400,220 360,240 400,260 440,240" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
+                                <text x="400" y="237" text-anchor="middle" fill="black" font-family="Arial, sans-serif" font-size="10">Power Cost vs</text>
+                                <text x="400" y="247" text-anchor="middle" fill="black" font-family="Arial, sans-serif" font-size="10">2.6¢/kWh?</text>
                                 
-                                <!-- Left branch: Cost > 2.6¢ -->
-                                <line x1="360" y1="290" x2="200" y2="290" class="waterfall-arrow"/>
-                                <text x="280" y="280" class="decision-text">Yes</text>
-                                <rect x="100" y="320" width="200" height="45" class="waterfall-box" fill="#6b7280" stroke="#4b5563"/>
-                                <text x="200" y="335" class="waterfall-small-text" fill="white">Cost > 2.6¢</text>
-                                <text x="200" y="350" class="waterfall-small-text" fill="white">Add to Backbone Principal</text>
-                                <text x="200" y="360" class="waterfall-small-text" fill="white">(30% IRR)</text>
+                                <!-- Left branch -->
+                                <line x1="360" y1="240" x2="200" y2="240" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+                                <text x="280" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="10">Cost > 2.6¢</text>
+                                <rect x="100" y="270" width="200" height="40" rx="6" fill="#6b7280" stroke="#4b5563" stroke-width="2"/>
+                                <text x="200" y="285" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11">Add to Backbone Principal</text>
+                                <text x="200" y="300" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11">(30% IRR)</text>
                                 
-                                <!-- Right branch: Cost ≤ 2.6¢ -->
-                                <line x1="440" y1="290" x2="600" y2="290" class="waterfall-arrow"/>
-                                <text x="520" y="280" class="decision-text">Equal</text>
-                                <rect x="500" y="320" width="200" height="45" class="waterfall-box" fill="#dc2626" stroke="#b91c1c"/>
-                                <text x="600" y="337" class="waterfall-small-text" fill="white">Cost ≤ 2.6¢</text>
-                                <text x="600" y="350" class="waterfall-small-text" fill="white">No Adjustment</text>
+                                <!-- Right branch -->
+                                <line x1="440" y1="240" x2="600" y2="240" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+                                <text x="520" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="10">Cost ≤ 2.6¢</text>
+                                <rect x="500" y="270" width="200" height="40" rx="6" fill="#dc2626" stroke="#b91c1c" stroke-width="2"/>
+                                <text x="600" y="287" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11">No Adjustment</text>
+                                <text x="600" y="300" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11">to Backbone</text>
                                 
-                                <!-- Middle branch: Cost < 2.6¢ -->
-                                <line x1="400" y1="310" x2="400" y2="340" class="waterfall-arrow"/>
-                                <rect x="300" y="350" width="200" height="45" class="waterfall-box" fill="#10b981" stroke="#059669"/>
-                                <text x="400" y="365" class="waterfall-small-text" fill="white">Cost < 2.6¢</text>
-                                <text x="400" y="378" class="waterfall-small-text" fill="white">Credit Savings</text>
-                                <text x="400" y="388" class="waterfall-small-text" fill="white">(Reduce Backbone Principal)</text>
+                                <!-- Middle branch -->
+                                <line x1="400" y1="260" x2="400" y2="285" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+                                <rect x="300" y="295" width="200" height="40" rx="6" fill="#10b981" stroke="#059669" stroke-width="2"/>
+                                <text x="400" y="310" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11">Credit Savings</text>
+                                <text x="400" y="325" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11">(Reduce Backbone)</text>
                                 
-                                <!-- Converging arrows to decision point -->
-                                <line x1="200" y1="365" x2="320" y2="420" class="waterfall-arrow"/>
-                                <line x1="400" y1="395" x2="400" y2="420" class="waterfall-arrow"/>
-                                <line x1="600" y1="365" x2="480" y2="420" class="waterfall-arrow"/>
+                                <!-- Convergence -->
+                                <line x1="200" y1="310" x2="350" y2="355" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+                                <line x1="400" y1="335" x2="400" y2="355" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+                                <line x1="600" y1="310" x2="450" y2="355" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
                                 
-                                <!-- Final decision: Backbone Principal + IRR Paid? -->
-                                <polygon points="400,430 340,450 400,470 460,450" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
-                                <text x="400" y="445" class="decision-text" fill="black">Backbone Principal +</text>
-                                <text x="400" y="455" class="decision-text" fill="black">IRR Paid?</text>
+                                <!-- Final decision -->
+                                <polygon points="400,365 340,385 400,405 460,385" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
+                                <text x="400" y="380" text-anchor="middle" fill="black" font-family="Arial, sans-serif" font-size="9">Backbone Principal</text>
+                                <text x="400" y="390" text-anchor="middle" fill="black" font-family="Arial, sans-serif" font-size="9">+ IRR Paid?</text>
                                 
                                 <!-- Final branches -->
-                                <!-- No branch -->
-                                <line x1="340" y1="450" x2="200" y2="450" class="waterfall-arrow"/>
-                                <text x="270" y="440" class="decision-text">No</text>
-                                <rect x="100" y="480" width="200" height="35" class="waterfall-box" fill="#92400e" stroke="#78350f"/>
-                                <text x="200" y="495" class="waterfall-small-text" fill="white">All Remaining to</text>
-                                <text x="200" y="507" class="waterfall-small-text" fill="white">Backbone Payment</text>
+                                <line x1="340" y1="385" x2="200" y2="385" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+                                <text x="270" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="10">No</text>
+                                <rect x="100" y="415" width="200" height="30" rx="6" fill="#92400e" stroke="#78350f" stroke-width="2"/>
+                                <text x="200" y="433" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11">All to Backbone Payment</text>
                                 
-                                <!-- Yes branch -->
-                                <line x1="460" y1="450" x2="600" y2="450" class="waterfall-arrow"/>
-                                <text x="530" y="440" class="decision-text">Yes</text>
-                                <rect x="500" y="480" width="200" height="35" class="waterfall-box" fill="#10b981" stroke="#059669"/>
-                                <text x="600" y="495" class="waterfall-small-text" fill="white">50/50 Split</text>
-                                <text x="600" y="507" class="waterfall-small-text" fill="white">Backbone/JV Partner</text>
+                                <line x1="460" y1="385" x2="600" y2="385" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+                                <text x="530" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="10">Yes</text>
+                                <rect x="500" y="415" width="200" height="30" rx="6" fill="#10b981" stroke="#059669" stroke-width="2"/>
+                                <text x="600" y="433" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11">50/50 Split Backbone/JV</text>
                                 
-                                <!-- Final convergence to End -->
-                                <line x1="200" y1="515" x2="350" y2="545" class="waterfall-arrow"/>
-                                <line x1="600" y1="515" x2="450" y2="545" class="waterfall-arrow"/>
-                                
-                                <!-- End box -->
-                                <rect x="350" y="555" width="100" height="25" class="waterfall-box" fill="#1f2937" stroke="#111827"/>
-                                <text x="400" y="572" class="waterfall-text" fill="white">End</text>
+                                <!-- End -->
+                                <line x1="200" y1="445" x2="350" y2="475" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+                                <line x1="600" y1="445" x2="450" y2="475" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+                                <rect x="350" y="485" width="100" height="25" rx="6" fill="#1f2937" stroke="#111827" stroke-width="2"/>
+                                <text x="400" y="500" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12">End</text>
                             </svg>
                         </div>
-                        <div class="waterfall-explanation">
+                        <div style="margin-top: 20px;">
                             <p><strong>Key Structure:</strong> Bitcoin mining revenue flows through JV operating expenses and debt service before power cost analysis determines backbone loan adjustments. Once backbone principal and 30% IRR are satisfied, remaining cash flow splits 50/50 between backbone and JV partners.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Slide 7: LNG Market Arbitrage (formerly Slide 6) -->
+            <!-- Slide 7: LNG Market Arbitrage (formerly 6) -->
             <section class="slide" id="slide-7">
                 <div class="slide-content">
                     <div class="slide-header">
@@ -439,89 +421,47 @@
                         <h2 class="subtitle">Future Gas Sales Revenue When AECO Pricing Improves</h2>
                     </div>
                     <div class="slide-body">
-                        <div class="netback-model">
+                        <div class="content-section">
                             <h3>Netback Revenue Model</h3>
-                            <div class="formula">
-                                <strong>Horn River Netback = Market Price - Transport Costs - Processing Fees</strong>
-                            </div>
-                        </div>
-                        
-                        <div class="economics-comparison">
-                            <div class="economics-period">
-                                <h4>Current (2025): Stranded Gas</h4>
-                                <div class="cost-breakdown">
-                                    <div class="cost-item">
-                                        <span class="cost-label">AECO:</span>
-                                        <span class="cost-value">$2.50/GJ</span>
-                                    </div>
-                                    <div class="cost-item">
-                                        <span class="cost-label">NGTL Transport:</span>
-                                        <span class="cost-value">$0.85/GJ</span>
-                                    </div>
-                                    <div class="cost-item">
-                                        <span class="cost-label">Processing:</span>
-                                        <span class="cost-value">$0.40/GJ</span>
-                                    </div>
-                                    <div class="netback-result negative">
-                                        <strong>Netback: $1.25/GJ → Below $1.50 breakeven</strong>
-                                    </div>
+                            <p><strong>Horn River Netback = Market Price - Transport Costs - Processing Fees</strong></p>
+                            
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                                <div>
+                                    <h4>Current (2025): Stranded Gas</h4>
+                                    <ul>
+                                        <li>AECO: $2.50/GJ</li>
+                                        <li>NGTL Transport: $0.85/GJ</li>
+                                        <li>Processing: $0.40/GJ</li>
+                                    </ul>
+                                    <p><strong>Netback: $1.25/GJ → Below $1.50 breakeven</strong></p>
+                                </div>
+                                
+                                <div>
+                                    <h4>Future (2027-2030): LNG Arbitrage</h4>
+                                    <ul>
+                                        <li>AECO: $4.37-$6.00/GJ (LNG-driven)</li>
+                                        <li>NGTL Transport: $0.85/GJ (same)</li>
+                                        <li>Processing: $0.40/GJ (same)</li>
+                                    </ul>
+                                    <p><strong>Netback: $3.12-$4.75/GJ → Profitable gas sales</strong></p>
                                 </div>
                             </div>
                             
-                            <div class="economics-period">
-                                <h4>Future (2027-2030): LNG Arbitrage</h4>
-                                <div class="cost-breakdown">
-                                    <div class="cost-item">
-                                        <span class="cost-label">AECO:</span>
-                                        <span class="cost-value">$4.37-$6.00/GJ (LNG-driven)</span>
-                                    </div>
-                                    <div class="cost-item">
-                                        <span class="cost-label">NGTL Transport:</span>
-                                        <span class="cost-value">$0.85/GJ (same)</span>
-                                    </div>
-                                    <div class="cost-item">
-                                        <span class="cost-label">Processing:</span>
-                                        <span class="cost-value">$0.40/GJ (same)</span>
-                                    </div>
-                                    <div class="netback-result positive">
-                                        <strong>Netback: $3.12-$4.75/GJ → Profitable gas sales</strong>
-                                    </div>
-                                </div>
+                            <div style="margin-top: 2rem;">
+                                <h3>Bridge Strategy Value</h3>
+                                <p><strong>Mining Revenue ($750k/month)</strong> funds lease payments, transport reservations, and operational readiness while waiting for AECO price recovery driven by:</p>
+                                <ul>
+                                    <li><strong>LNG Canada Phase 1:</strong> 1.84 Bcf/d operational (2025)</li>
+                                    <li><strong>Near-term LNG projects:</strong> Woodfibre (0.28 Bcf/d, 2027) & Cedar LNG (0.39 Bcf/d, 2028)</li>
+                                    <li><strong>Total incremental demand:</strong> 4.35 Bcf/d by 2030 drives AECO basis improvement</li>
+                                </ul>
                             </div>
-                        </div>
-                        
-                        <div class="revenue-potential">
-                            <h3>LNG Sales Revenue Potential</h3>
-                            <div class="revenue-scenarios">
-                                <div class="revenue-case">
-                                    <h4>Base Case: 20 MMcf/d Production</h4>
-                                    <p>Annual Revenue: $22.8M - $34.7M</p>
-                                    <p><strong>Netback Multiple:</strong> 2.5x - 3.8x over breakeven</p>
-                                </div>
-                                <div class="revenue-case">
-                                    <h4>Bull Case: 40 MMcf/d Production</h4>
-                                    <p>Annual Revenue: $45.5M - $69.4M</p>
-                                    <p><strong>NPV (10% discount):</strong> $85M+ over project life</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="bridge-strategy">
-                            <h3>Bridge Strategy Value</h3>
-                            <p><strong>Mining Revenue ($750k/month)</strong> funds lease payments, transport reservations, and operational readiness while waiting for AECO price recovery driven by:</p>
-                            <ul class="lng-drivers">
-                                <li><strong>LNG Canada Phase 1:</strong> 1.84 Bcf/d operational (2025)</li>
-                                <li><strong>Near-term LNG projects:</strong> Woodfibre (0.28 Bcf/d, 2027) & Cedar LNG (0.39 Bcf/d, 2028)</li>
-                                <li><strong>LNG Canada Phase 2 potential:</strong> Additional 1.84 Bcf/d (post-2030)</li>
-                                <li><strong>Pipeline capacity constraints:</strong> Creating regional price premiums</li>
-                                <li><strong>Total incremental demand:</strong> 4.35 Bcf/d by 2030 drives AECO basis improvement</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Slide 8: Competitive Advantages (formerly Slide 7) -->
+            <!-- Slide 8: Competitive Advantages (formerly 7) -->
             <section class="slide" id="slide-8">
                 <div class="slide-content">
                     <div class="slide-header">
@@ -531,38 +471,32 @@
                     <div class="slide-body">
                         <div class="advantages-grid">
                             <div class="advantage-item">
-                                <div class="advantage-icon">⚡</div>
-                                <h3>Behind-the-Meter Power</h3>
+                                <h3>⚡ Behind-the-Meter Power</h3>
                                 <p>Direct gas-to-power generation bypasses grid constraints and provides cost advantage at $0.025-$0.026/kWh</p>
                             </div>
                             
                             <div class="advantage-item">
-                                <div class="advantage-icon">🌱</div>
-                                <h3>Net-Zero Operations</h3>
+                                <h3>🌱 Net-Zero Operations</h3>
                                 <p>CO2 injection capabilities enable carbon-neutral operations, meeting ESG requirements for institutional investors</p>
                             </div>
                             
                             <div class="advantage-item">
-                                <div class="advantage-icon">❄️</div>
-                                <h3>Strategic Location</h3>
+                                <h3>❄️ Strategic Location</h3>
                                 <p>BC location provides natural cooling, reducing OPEX by 30-40% compared to traditional data center locations</p>
                             </div>
                             
                             <div class="advantage-item">
-                                <div class="advantage-icon">🏗️</div>
-                                <h3>Proven Infrastructure</h3>
+                                <h3>🏗️ Proven Infrastructure</h3>
                                 <p>$1B existing infrastructure reduces capex requirements and accelerates deployment timeline</p>
                             </div>
                             
                             <div class="advantage-item">
-                                <div class="advantage-icon">💰</div>
-                                <h3>Superior Economics</h3>
+                                <h3>💰 Superior Economics</h3>
                                 <p>Proven gas-to-power model with predictable costs and scalable capacity expansion</p>
                             </div>
                             
                             <div class="advantage-item">
-                                <div class="advantage-icon">🏛️</div>
-                                <h3>Regulatory Certainty</h3>
+                                <h3>🏛️ Regulatory Certainty</h3>
                                 <p>10+ year permits and stable BC regulatory framework provide long-term operational security</p>
                             </div>
                         </div>
@@ -570,7 +504,7 @@
                 </div>
             </section>
 
-            <!-- Slide 9: Investment Structure (formerly Slide 8) -->
+            <!-- Slide 9: Investment Structure (formerly 8) -->
             <section class="slide" id="slide-9">
                 <div class="slide-content">
                     <div class="slide-header">
@@ -578,56 +512,44 @@
                         <h2 class="subtitle">Structured Approach with Multiple Protection Mechanisms</h2>
                     </div>
                     <div class="slide-body">
-                        <div class="structure-grid">
-                            <div class="structure-section">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                            <div>
                                 <h3>Bridge Loan Terms</h3>
-                                <div class="terms-grid">
-                                    <div class="term-item">
-                                        <span class="term-label">Amount:</span>
-                                        <span class="term-value">$4.9M</span>
-                                    </div>
-                                    <div class="term-item">
-                                        <span class="term-label">Term:</span>
-                                        <span class="term-value">24 months</span>
-                                    </div>
-                                    <div class="term-item">
-                                        <span class="term-label">Interest Rate:</span>
-                                        <span class="term-value">30% IRR target</span>
-                                    </div>
-                                    <div class="term-item">
-                                        <span class="term-label">Security:</span>
-                                        <span class="term-value">First lien on all assets</span>
-                                    </div>
-                                </div>
+                                <ul>
+                                    <li><strong>Amount:</strong> $4.9M</li>
+                                    <li><strong>Term:</strong> 24 months</li>
+                                    <li><strong>Interest Rate:</strong> 30% IRR target</li>
+                                    <li><strong>Security:</strong> First lien on all assets</li>
+                                </ul>
                             </div>
                             
-                            <div class="structure-section">
+                            <div>
                                 <h3>Structure Features</h3>
-                                <ul class="features-list">
+                                <ul>
                                     <li><strong>Pro-rata ownership</strong> based on actual capital contributions</li>
                                     <li><strong>Conversion option</strong> to equity if not repaid</li>
                                     <li><strong>Dynamic participation rights</strong> evolving with each phase</li>
                                     <li><strong>Asset protection</strong> through comprehensive lien structure</li>
-                                    <li><strong>Milestone-based</strong> funding releases</li>
                                 </ul>
                             </div>
                         </div>
                         
-                        <div class="protections-section">
+                        <div style="margin-top: 2rem;">
                             <h3>Investor Protections</h3>
-                            <div class="protections-grid">
-                                <div class="protection-item">First-priority security interest in all assets</div>
-                                <div class="protection-item">Quarterly reporting and operational updates</div>
-                                <div class="protection-item">Board representation rights</div>
-                                <div class="protection-item">Anti-dilution provisions</div>
-                                <div class="protection-item">Tag-along and drag-along rights</div>
-                            </div>
+                            <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <li>First-priority security interest in all assets</li>
+                                <li>Quarterly reporting and operational updates</li>
+                                <li>Board representation rights</li>
+                                <li>Anti-dilution provisions</li>
+                                <li>Tag-along and drag-along rights</li>
+                                <li>Milestone-based funding releases</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Slide 10: Exit Strategies (formerly Slide 9) -->
+            <!-- Slide 10: Exit Strategies (formerly 9) -->
             <section class="slide" id="slide-10">
                 <div class="slide-content">
                     <div class="slide-header">
@@ -637,31 +559,27 @@
                     <div class="slide-body">
                         <div class="exit-strategies">
                             <div class="exit-strategy">
-                                <div class="exit-icon">🏢</div>
-                                <h3>Hand-off to Developer</h3>
+                                <h3>🏢 Hand-off to Developer</h3>
                                 <p>Transfer to large-scale data center developer after Phase 2, capitalizing on proven model and existing infrastructure</p>
                             </div>
                             
                             <div class="exit-strategy">
-                                <div class="exit-icon">📈</div>
-                                <h3>IPO/REIT Structure</h3>
+                                <h3>📈 IPO/REIT Structure</h3>
                                 <p>Public offering of scaled portfolio with recurring revenue streams from data center operations and energy assets</p>
                             </div>
                             
                             <div class="exit-strategy">
-                                <div class="exit-icon">🪙</div>
-                                <h3>Tokenization of Reserves</h3>
+                                <h3>🪙 Tokenization of Reserves</h3>
                                 <p>Digital asset creation backed by ~15 Tcf recoverable gas reserves in place, providing liquidity and fractional ownership opportunities</p>
                             </div>
                             
                             <div class="exit-strategy">
-                                <div class="exit-icon">🤝</div>
-                                <h3>Strategic Sale</h3>
+                                <h3>🤝 Strategic Sale</h3>
                                 <p>Acquisition by hyperscaler or energy company seeking integrated energy-computing solution</p>
                             </div>
                         </div>
                         
-                        <div class="value-maximization">
+                        <div style="margin-top: 2rem;">
                             <h3>Value Maximization Strategy</h3>
                             <p>Multiple exit paths provide flexibility to optimize timing and valuation based on market conditions, technological developments, and operational performance. The phased approach allows for value crystallization at multiple points.</p>
                         </div>
