@@ -1,5 +1,5 @@
 let currentSlide = 1;
-const totalSlides = 10; // Updated to 10 slides
+const totalSlides = 9; // Updated to 9 slides
 
 function showSlide(slideNumber) {
     // Hide all slides
@@ -18,6 +18,9 @@ function showSlide(slideNumber) {
     
     // Update navigation buttons
     updateNavigationButtons(slideNumber);
+    
+    // Update slide indicators
+    updateSlideIndicators(slideNumber);
 }
 
 function nextSlide() {
@@ -62,6 +65,17 @@ function updateNavigationButtons(slideNumber) {
         nextBtn.classList.remove('disabled');
         nextBtn.disabled = false;
     }
+}
+
+function updateSlideIndicators(slideNumber) {
+    const indicators = document.querySelectorAll('.indicator');
+    indicators.forEach((indicator, index) => {
+        if (index + 1 === slideNumber) {
+            indicator.classList.add('active');
+        } else {
+            indicator.classList.remove('active');
+        }
+    });
 }
 
 // Keyboard navigation
@@ -116,5 +130,45 @@ function handleSwipe() {
 // Initialize presentation
 document.addEventListener('DOMContentLoaded', function() {
     showSlide(1);
-    updateNavigationButtons(1);
+    
+    // Add click handlers to navigation buttons
+    document.getElementById('prev-btn').addEventListener('click', previousSlide);
+    document.getElementById('next-btn').addEventListener('click', nextSlide);
+    
+    // Add click handlers to slide indicators
+    const indicators = document.querySelectorAll('.indicator');
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', function() {
+            goToSlide(index + 1);
+        });
+    });
 });
+
+// Auto-play functionality (optional)
+let autoPlay = false;
+let autoPlayInterval;
+
+function startAutoPlay(intervalMs = 5000) {
+    if (autoPlay) return;
+    
+    autoPlay = true;
+    autoPlayInterval = setInterval(() => {
+        if (currentSlide < totalSlides) {
+            nextSlide();
+        } else {
+            goToSlide(1); // Loop back to first slide
+        }
+    }, intervalMs);
+}
+
+function stopAutoPlay() {
+    if (!autoPlay) return;
+    
+    autoPlay = false;
+    clearInterval(autoPlayInterval);
+}
+
+// Pause auto-play on user interaction
+document.addEventListener('click', stopAutoPlay);
+document.addEventListener('keydown', stopAutoPlay);
+document.addEventListener('touchstart', stopAutoPlay);
