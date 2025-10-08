@@ -1030,7 +1030,7 @@ body {
 }
 
 .asset-section li::before {
-  content: "•";
+  content: "â€¢";
   color: var(--color-teal-300);
   position: absolute;
   left: 0;
@@ -1125,7 +1125,7 @@ body {
 }
 
 .driver-section li::before, .advantage-section li::before {
-  content: "▸";
+  content: "â–¸";
   color: var(--color-teal-300);
   position: absolute;
   left: 0;
@@ -1311,7 +1311,7 @@ body {
 }
 
 .structure-features li::before, .investor-protections li::before {
-  content: "✓";
+  content: "âœ“";
   color: var(--color-teal-300);
   position: absolute;
   left: 0;
